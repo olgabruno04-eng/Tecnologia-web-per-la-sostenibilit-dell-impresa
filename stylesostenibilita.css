@@ -1,0 +1,415 @@
+/* HERO E TITOLI GIÀ ESISTENTI */
+.hero {
+  background: linear-gradient(135deg, #854d3f, #661603);
+  padding: 80px 20px;
+  text-align: center;
+  color: #ffffff;
+  animation: fadeSlide 1.2s ease-out;
+}
+
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+  font-size: 3em;
+  font-weight: bold;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: default;
+  color: #ffffff;
+  padding-bottom: 8px;
+}
+
+.animated-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 0;
+  background: linear-gradient(90deg,#854d3f, #661603);
+  border-radius: 2px;
+  transition: width 0.7s ease;
+  animation: expandLine 1.5s forwards 1.2s;
+}
+
+.title:hover::after {
+  width: 100%;
+}
+
+@keyframes expandLine {
+  to {
+    width: 100%;
+  }
+}
+
+.subtitle {
+  display: block;
+  font-size: 1.3em;
+  font-weight: normal;
+  margin-top: 10px;
+  color: #ffffff;
+  font-style: italic;
+}
+
+/* INTRODUZIONE */
+.intro {
+  padding: 2rem;
+  background-color: #fffdf3;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.intro blockquote {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #501000;
+} 
+
+
+
+/* STATISTICHE */
+.statistiche {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.statistica-item {
+  background: #d9f0d9;
+  border-radius: 12px;
+  padding: 1.8rem 2.5rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1 1 180px;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.statistica-item:hover {
+  transform: scale(1.05);
+}
+
+.statistica-item h3 {
+  font-size: 2.4rem;
+  color: #501000;
+  margin: 0 0 0.2rem;
+  font-weight: 900;
+  user-select: none;
+}
+
+.statistica-item p {
+  margin: 0;
+  color: #501000;
+  font-weight: 600;
+  user-select: none;
+}
+
+.intro-banner {
+  width: 100%;
+  height: 100px; /* Puoi aumentare o ridurre l'altezza */
+  background-image: linear-gradient(rgba(104, 0, 0, 0.5), rgba(104, 0, 0, 0.5)), 
+                    url(f23d26ff7410e3caca02d7a2f5b71b31.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/* TEMI SOSTENIBILITÀ */
+.temi-sostenibilita {
+  padding: 2rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.temi-sostenibilita h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #501000;
+}
+
+.temi-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tema {
+  background-color: #f1fdf0;
+  border-left: 5px solid #501000;
+  padding: 1rem;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: left;
+}
+
+.tema:hover {
+  transform: translateY(-5px);
+}
+
+.tema h3 {
+  margin-top: 0;
+  color: #501000;
+  position: relative;
+  padding-left: 24px;
+}
+
+.tema h3::before {
+  content: url('https://cdn-icons-png.flaticon.com/16/616/616408.png');
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* BARRA DI PROGRESSO */
+.progress-bar {
+  background: #e0f0e0;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 320px;
+  height: 22px;
+  margin: 1rem 0 0 0;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #854d3f, #661603);
+  width: 0%;
+  border-radius: 20px 0 0 20px;
+  transition: width 2s ease-in-out;
+}
+
+/* Animazione barra progresso */
+.progress-bar[data-progress='50'] .progress-fill {
+  width: 50%;
+}
+
+.progress-bar[data-progress='100'] .progress-fill {
+  width: 100%;
+}
+
+
+
+/* DOWNLOAD REPORT */
+.report-download {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f9f9f9;
+}
+
+.download-btn {
+  background-color: #ff5e00c9;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #501000;
+  transform: scale(1.05);
+}
+
+/* BACKGROUND LEGGERO */
+body {
+  background: #f9fcf7 url('https://www.transparenttextures.com/patterns/asfalt-light.png') repeat;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.curiosita {
+  padding: 2rem;
+  background-color: #e9f7e9;
+  text-align: center;
+}
+
+.curiosita h2 {
+  color:#661603;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.curiosita-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.curiosita-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 280px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  text-align: left;
+}
+
+.curiosita-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.curiosita-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;  /* rende l'immagine circolare */
+  display: block;
+  margin: 0 auto 1rem auto; /* centra l'immagine e margine sotto */
+}
+
+
+.curiosita-card h3 {
+  margin: 1rem;
+  color: #661603;
+  font-size: 1.3rem;
+}
+
+.curiosita-card p {
+  margin: 0 1rem 1rem 1rem;
+  color: #661603;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+  .citazione-finale {
+  width: 100%;
+  margin: 0;
+  padding: 2rem 1.5rem 2rem 3rem;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #000000;
+  text-align: center;
+  font-family: 'Georgia', serif;
+  background-image: url("Tableaux Trèfle N° s39216 - acheter dans la….jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(104, 0, 0, 0.507);
+  background-blend-mode: lighten;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+
+.citazione-finale blockquote {
+  margin: 0;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.citazione-finale blockquote::before {
+  content: "“";
+  font-size: 4rem;
+  color: #703526;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1;
+  font-family: 'Georgia', serif;
+  opacity: 0.3;
+  user-select: none;
+  pointer-events: none;
+}
+.call-to-action {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  border-radius: 12px;
+  font-family: 'Georgia', serif;
+  color: #854d3f;
+  box-shadow: none; /* niente ombra */
+  border: none; /* niente bordo */
+  /* background-color rimosso per niente sfondo */
+  transition: background-color 0.3s ease;
+}
+
+.call-to-action:hover {
+  /* rimuovi anche l’effetto hover sul background */
+  background-color: transparent;
+}
+
+.call-to-action h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.call-to-action p {
+  font-size: 1.1rem;
+  margin-bottom: 1.8rem;
+  color: #854d3f;
+}
+
+.cta-button {
+  background-color: #854d3f;
+  color: #fff;
+  padding: 12px 28px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  box-shadow: none; /* niente ombra */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #703526;
+  transform: scale(1.05);
+}
+.footer {
+  background-color: #4b1001; /* Verde scuro */
+  color: #ffffff;            /* Testo bianco */
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.95rem;
+  font-family: 'Arial', sans-serif;
+  margin-top: 2rem;
+}
+
+.footer p {
+  margin: 0;
+}
+.immagine-separatore {
+  width: 100%;
+  height: 120px;
+  background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), 
+                    url(dd7e04d29e449e34e3431ae96948a9c2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 3rem 0;
+}
